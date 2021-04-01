@@ -12,9 +12,25 @@ footer {
   padding: 2rem;
 }
 
-ul {
-  color: white;
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+nav ul li {
   display: inline-block;
+  padding: 0.5rem;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: pink;
 }
 
 #main {
@@ -23,6 +39,9 @@ ul {
   padding: 2rem;
 }
 
-#links {
-  color: white;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
