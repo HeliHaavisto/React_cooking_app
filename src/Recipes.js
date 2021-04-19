@@ -5,7 +5,24 @@ class Recipes extends Component {
     state = {
         recipes: [],
         isLoading: false,
+        searchInput: "",
     }
+    SearchBox = (props) => {
+        return (
+            <div>
+                <input type="text" onChange={props.search} placeholder="Search recipes"></input>
+            </div>
+        );
+    };
+
+    searchValueHandler = (event) => {
+
+        this.setState({
+            searchInput: event.target.value,
+        });
+        console.log(this.state.searchInput);
+    };
+
     componentDidMount() {
         this.setState({ isLoading: true });
         axios
@@ -18,6 +35,7 @@ class Recipes extends Component {
         return (
             <div>
                 <h1>Recipe page</h1>
+                <this.SearchBox search={this.searchValueHandler} />
                 <div className="recipesList">
                     <div className="card">
                         <h2>Name {this.state.recipes.name}</h2><br></br>
@@ -27,7 +45,7 @@ class Recipes extends Component {
                     </div>
 
                 </div>
-            </div>
+            </div >
         );
     }
 }
