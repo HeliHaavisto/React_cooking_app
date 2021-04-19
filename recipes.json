@@ -1,0 +1,86 @@
+{
+    "recipes":[
+        {
+            "name": "Chicken Soup",
+            "description": "Chicken soup with hint of lemon",  
+            "recipeIngredient": [
+                "2 tbsp olive oil",
+                "1 onion peeled and chopped",
+                "2 carrots peeled and chopped",
+                "1 l water",
+                "2 chicken broth cubes",
+                "bay leaf",
+                "peel of one lemon",
+                "1 tsp thyme",
+                "5 potatoes peeled and chopped",
+                "2-3 chicken fillets chopped",
+                "salt and pepper",
+                "french cream if wanted"
+              ],
+              "recipeInstructions": [
+                {
+                  "name": "Step 1",
+                  "text": "Heat up the oil in pan, add in onion and carrots, fry in mild heat for 10 mins. Add water, broth cube, bay leaf, lemon peel and thyme. Boil 30 mins."
+                }
+                ,
+                {
+                  "name": "Step 2",
+                  "text": "Add potatoes and chicken to the soup, boil 15 mins."
+                }
+                ,
+                {
+                  "name": "Step 3",
+                  "text": "Season with salt and pepper and if wanted with french cream"
+                }
+              ]
+        },
+        {
+            "name": "Old fashioned pancakes", 
+            "description": "Lovely pancakes",
+            "recipeIngredient": [
+                "1.5 cups all purpose flour",
+                "3.5 tsp baking powder",
+                "1 tsp salt ( or a bit less)",
+                "1 tbsp sugar",
+                "1.25 cups milk",
+                "1 egg",
+                "3 tbsp butter melted"
+              ],
+              "recipeInstructions": [
+                {
+                  "@type": "HowToStep",
+                  "name": "Step 1",
+                  "text": "Sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butted and mix."
+                }
+                ,
+                {
+                  "@type": "HowToStep",
+                  "name": "Step 2",
+                  "text": "Fry in a pancake pan. Enjoy!"
+                }
+              ]
+              
+        },
+        {
+            "name": "Rieska", 
+            "description": "Finnish traditional bread",
+            "recipeIngredient": [
+                " 2 dl cold water",
+                "4-4.5 dl barley flour",
+                "1 tsp salt"
+              ],
+              "recipeInstructions": [
+                {
+                  "name": "Step 1",
+                  "text": "Mix all ingredients quickly together and bake them 0.5 thick round flat breads."
+                }
+                ,
+                {
+
+                  "name": "Step 2",
+                  "text": "Put some hole with a fork to the breads and bake in the oven for 15 mins in 250-300 °C"
+                }
+              ]
+        }
+    ]
+}

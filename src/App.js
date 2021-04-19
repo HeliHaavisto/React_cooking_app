@@ -4,14 +4,25 @@ import Footer from "./Footer";
 import Main from "./Main";
 import { BrowserRouter as Router } from 'react-router-dom';
 
-function App() {
-  return (
-    <Router>
-      <Header />
-      <Main />
-      <Footer />
-    </Router>
-  );
+
+import React, { Component } from 'react';
+
+class App extends Component {
+
+
+  render() {
+    return (
+      <div>
+        <Router>
+          <Header />
+          <Main />
+          <Footer />
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
+
+

@@ -45,3 +45,15 @@ header a:hover {
   justify-content: space-between;
   align-items: center;
 }
+
+.card {
+  height: 300px;
+  width: 500px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.recipesList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
