@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
         <footer>
-            <div>copyright</div>
+            <div>copyright Heli Haavisto 2021</div>
         </footer>
     );
 };

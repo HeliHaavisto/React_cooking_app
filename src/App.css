@@ -49,11 +49,16 @@ header a:hover {
 .card {
   height: 300px;
   width: 500px;
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 5px 5px 10px rgb(15, 15, 68);
+  margin: 2rem;
+  color: rgb(15, 15, 68);
+}
+
+.card img {
+  width: 200px;
 }
 
 .recipesList {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  display: flex;
+  justify-content: center;
 }

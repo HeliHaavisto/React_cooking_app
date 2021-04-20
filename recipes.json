@@ -2,7 +2,8 @@
     "recipes":[
         {
             "name": "Chicken Soup",
-            "description": "Chicken soup with hint of lemon",  
+            "description": "Chicken soup with hint of lemon",
+            "image": "./chickensoup.png", 
             "recipeIngredient": [
                 "2 tbsp olive oil",
                 "1 onion peeled and chopped",
@@ -37,6 +38,7 @@
         {
             "name": "Old fashioned pancakes", 
             "description": "Lovely pancakes",
+            "image": "./pancakes.png", 
             "recipeIngredient": [
                 "1.5 cups all purpose flour",
                 "3.5 tsp baking powder",
@@ -64,6 +66,7 @@
         {
             "name": "Rieska", 
             "description": "Finnish traditional bread",
+            "image": "./rieska.png", 
             "recipeIngredient": [
                 " 2 dl cold water",
                 "4-4.5 dl barley flour",
