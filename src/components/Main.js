@@ -1,7 +1,7 @@
 import React from "react";
-import Home from "./Home";
-import Recipes from "./Recipes";
-import About from "./About";
+import Home from "../pages/Home";
+import Recipes from "../pages/Recipes";
+import About from "../pages/About";
 import { Switch, Route } from "react-router-dom";
 
 const Main = () => {

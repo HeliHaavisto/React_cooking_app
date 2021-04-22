@@ -1,10 +1,10 @@
 import React from "react";
-import Nav from "./Nav";
+import Nav from "../components/Nav";
 
 const Header = () => {
     return (
         <header className="container">
-            <h1>Lovely recipes</h1>
+            <h1>Lovely recipes  <i class="fas fa-hamburger"></i></h1>
             <Nav />
         </header>
     );
