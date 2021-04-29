@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import RecipeCard from "../components/RecipeCard";
+import SingleRecipe from "../components/SingleRecipe";
+import AddRecipe from "../pages/AddRecipe";
+import { Switch, Route } from 'react-router-dom';
 
-class Recipes extends Component {
-    state = {
-        recipes: [],
-        isLoading: false,
-        searchInput: "",
-    }
-    SearchBox = (props) => {
+const Recipes = () => {
+    const [recipes, setRecipes] = useState([]);
+    const [searchInput, setSearchInput] = useState("");
+
+
+    const SearchBox = (props) => {
         return (
             <div >
                 <input type="text" className="searchBox" onChange={props.search} placeholder="Search recipes"></input>
@@ -16,49 +18,53 @@ class Recipes extends Component {
         );
     };
 
-    searchValueHandler = (event) => {
-
-        this.setState({
-            searchInput: event.target.value,
+    const searchValueHandler = (event) => {
+        setSearchInput({
+            ...searchInput, [event.target.name]: event.target.value
         });
-        console.log(this.state.searchInput);
     };
 
-    componentDidMount() {
-        this.setState({ isLoading: true });
+    useEffect(() => {
         axios
             .get("http://localhost:3001/recipes")
-            .then((response) =>
-                this.setState({
-                    recipes: response.data, isLoading: false
-                })
+            .then((res => setRecipes(res.data)));
+    }, []);
 
-            );
 
-    };
-    render() {
-        const recipeFilter = this.state.recipes.filter(recipe => {
-            return recipe.name.toLocaleLowerCase().includes(this.state.searchInput.toLocaleLowerCase());
-        });
-        const recipesList = recipeFilter.map((recipe) => { return (<RecipeCard name={recipe.name} key={recipe.id} image={recipe.image} description={recipe.description} recipeIngredient={recipe.recipeIngredient} recipeInstructions={recipe.recipeInstructions} />) })
-        return (
-            <div className="recipes">
-                <div className="card2">
-                    <section id="pins">
-                        <div className="pin"></div>
-                        <div className="pin"></div>
-                    </section>
 
-                    <h1>Recipe page</h1>
-                    <this.SearchBox search={this.searchValueHandler} />
-                </div>
+    const recipeFilter = recipes.filter((recipe) => {
+        return recipe.name.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase());
+    });
 
-                <div>
-                    {recipesList}
-                </div>
-            </div >
-        );
-    }
-}
+    const recipesList = recipeFilter.map((recipe) => { return (<RecipeCard name={recipe.name} key={recipe.id} image={recipe.image} description={recipe.description} recipeIngredient={recipe.recipeIngredient} recipeInstructions={recipe.recipeInstructions} link={recipe.id} />) });
+
+    return (
+        <div className="recipes">
+            <Switch>
+                <Route path="/:recipes" exact>
+                    <div className="card2">
+                        <section id="pins">
+                            <div className="pin"></div>
+                            <div className="pin"></div>
+                        </section>
+
+                        <h1>Recipe page</h1>
+                        <SearchBox search={searchValueHandler} />
+
+                    </div>
+
+                    <div>
+                        {recipesList}
+                    </div>
+                </Route>
+                <Route path="/recipes/:id">
+                    <SingleRecipe />
+                    <p>this will be recipe </p>
+                </Route>
+
+            </Switch>
+        </div >
+    );
+};
 
 export default Recipes;

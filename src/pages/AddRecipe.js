@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AddRecipe = () => {
+const AddRecipe = (submit) => {
     return (
         <div className="addRecipe">
             <div className="card">
@@ -10,7 +10,7 @@ const AddRecipe = () => {
                 </section>
 
                 <h1>Add your own recipe</h1>
-                <form method="post" enctype="multipart/form-data">
+                <form method="post" enctype="multipart/form-data" submit={submit} >
                     <label htmlFor="name">Recipe name</label><br></br>
                     <input type="text" name="name" required></input><br></br>
 

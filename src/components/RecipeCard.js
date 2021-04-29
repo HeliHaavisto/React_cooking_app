@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RecipeCard = (props) => {
     return (
@@ -11,30 +12,10 @@ const RecipeCard = (props) => {
                 <h2>{props.name}</h2><br></br>
                 <img src={`assets/${props.image}`} alt={props.name} />
                 <p>{props.description}</p><br></br>
-                <h3>Ingredients</h3>
-                <ul>
-                    {props.recipeIngredient.map(
-                        (item) => {
-                            return <li>{item}</li>;
-                        }
-                    )}
-                </ul>
-                <h3>Instructions</h3>
-                <ul>
-                    {props.recipeInstructions.map(
-                        (item) => {
-                            return (
-                                <li>
-                                    {" "}
-                                    {item.name}
-                                    <ul>
-                                        <li>{item.text}</li>
-                                    </ul>
-                                </li>
-                            )
-                        }
-                    )}
-                </ul>
+
+                <Link to={`/recipes/${props.link}`}>Read more</Link>
+
+
             </div>
 
         </div>
