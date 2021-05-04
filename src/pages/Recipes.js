@@ -5,23 +5,21 @@ import SingleRecipe from "../components/SingleRecipe";
 import AddRecipe from "../pages/AddRecipe";
 import { Switch, Route } from 'react-router-dom';
 
+const SearchBox = ({ search }) => {
+    return (
+        <div >
+            <input type="text" className="searchBox" onChange={search} placeholder="Search recipes"></input>
+        </div>
+    );
+};
+
 const Recipes = () => {
     const [recipes, setRecipes] = useState([]);
     const [searchInput, setSearchInput] = useState("");
 
 
-    const SearchBox = (props) => {
-        return (
-            <div >
-                <input type="text" className="searchBox" onChange={props.search} placeholder="Search recipes"></input>
-            </div>
-        );
-    };
-
     const searchValueHandler = (event) => {
-        setSearchInput({
-            ...searchInput, [event.target.name]: event.target.value
-        });
+        setSearchInput(event.target.value);
     };
 
     useEffect(() => {
@@ -47,19 +45,16 @@ const Recipes = () => {
                             <div className="pin"></div>
                             <div className="pin"></div>
                         </section>
-
                         <h1>Recipe page</h1>
                         <SearchBox search={searchValueHandler} />
-
                     </div>
-
                     <div>
                         {recipesList}
                     </div>
                 </Route>
                 <Route path="/recipes/:id">
                     <SingleRecipe />
-                    <p>this will be recipe </p>
+
                 </Route>
 
             </Switch>

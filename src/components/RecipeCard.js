@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const RecipeCard = (props) => {
     return (
-        <div className="recipesList">
+        <div className="recipesList" key={props.id}>
             <div className="card">
                 <section id="pins">
                     <div className="pin"></div>

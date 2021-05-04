@@ -23,19 +23,23 @@ const SingleRecipe = () => {
     if (recipe) {
         recipeData =
             <>
-                <div className="card">
+                <div className="card" key={recipe.id}>
                     <section id="pins">
                         <div className="pin"></div>
                         <div className="pin"></div>
                     </section>
-                    <h1>{recipe.name}</h1>
+                    <h1 >{recipe.name}</h1>
                     <img src={`../assets/${recipe.image}`} alt={recipe.name} />
                     <p>{recipe.description}</p><br></br>
                     <h3>Ingredients</h3>
                     <ul>
                         {recipe.recipeIngredient.map(
                             (item) => {
-                                return <li>{item}</li>;
+                                return (
+                                    <li>
+                                        {item.amount} {item.name}
+                                    </li>
+                                )
                             }
                         )}
                     </ul>
