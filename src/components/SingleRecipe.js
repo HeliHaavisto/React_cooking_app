@@ -36,7 +36,7 @@ const SingleRecipe = () => {
                         {recipe.recipeIngredient.map(
                             (item) => {
                                 return (
-                                    <li>
+                                    <li key={item.id}>
                                         {item.amount} {item.name}
                                     </li>
                                 )
@@ -48,7 +48,7 @@ const SingleRecipe = () => {
                         {recipe.recipeInstructions.map(
                             (item) => {
                                 return (
-                                    <li>
+                                    <li key={item.id}>
                                         {" "}
                                         {item.name}
                                         <ul>

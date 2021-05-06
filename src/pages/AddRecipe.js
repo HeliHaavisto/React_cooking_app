@@ -65,7 +65,7 @@ const AddRecipe = () => {
                 <label htmlFor="">Amount</label><br></br>
                 <input type="text" name="amount" onChange={(e) => changeIngredients(e, i)} ></input><br></br>
                 <label htmlFor="">Ingredient</label><br></br>
-                <textarea name="name" cols="30" rows="5" maxLength="100" onChange={(e) => changeIngredients(e, i)} required></textarea><br></br>
+                <textarea name="name" cols="20" rows="5" maxLength="100" onChange={(e) => changeIngredients(e, i)} required></textarea><br></br>
             </div>
         )
     })
@@ -75,7 +75,7 @@ const AddRecipe = () => {
             <label htmlFor="">Instruction step</label><br></br>
             <input type="text" name="name" onChange={(e) => changeInstructions(e, i)} ></input><br></br>
             <label htmlFor="">Instruction </label><br></br>
-            <textarea name="text" cols="30" rows="20" maxLength="500" onChange={(e) => changeInstructions(e, i)} required></textarea><br></br>
+            <textarea name="text" cols="20" rows="10" maxLength="500" onChange={(e) => changeInstructions(e, i)} required></textarea><br></br>
         </div>);
     })
 

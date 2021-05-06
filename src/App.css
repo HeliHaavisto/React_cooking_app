@@ -3,13 +3,33 @@
 header {
   text-align: center;
   background-color: rgb(15, 15, 68);
-  color: white;
+  color: orange;
   padding: 2rem;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 90;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.text-black {
+  color: black;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: orange;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: white;
+}
+
+/* nav .nav-link:hover {
+  color: white;
+} */
 footer {
   text-align: center;
   background-color: rgb(15, 15, 68);
@@ -30,26 +50,17 @@ nav ul li {
   padding: 0.5rem;
 }
 
-header a {
-  color: white;
-  text-decoration: none;
-}
-
-header a:hover {
-  color: pink;
-}
-
 #main {
   text-align: center;
   color: rgb(15, 15, 68);
 }
 
-.container {
+/* .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
 .card {
   height: auto;
@@ -74,6 +85,7 @@ header a:hover {
 
 .card img {
   width: 400px;
+  align-self: center;
 }
 
 /* .recipesList {
@@ -97,25 +109,24 @@ header a:hover {
     center center/cover;
   display: flex;
   justify-content: center;
-  padding-bottom: 37vh;
+  padding-bottom: 42vh;
 }
 
 .about {
-  padding-top: 300px;
+  padding-top: 150px;
   background: url("https://source.unsplash.com/XFCei-F4mjg") no-repeat fixed
     center center/cover;
   display: flex;
   justify-content: center;
-  padding-bottom: 35vh;
+  padding-bottom: 30vh;
 }
 
 .addRecipe {
-  padding-top: 300px;
+  padding-top: 150px;
   background: url("https://source.unsplash.com/XFCei-F4mjg") no-repeat fixed
     center center/cover;
   display: flex;
   justify-content: center;
-  padding-bottom: 35vh;
 }
 
 .card ul {

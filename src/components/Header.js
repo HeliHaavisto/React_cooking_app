@@ -1,11 +1,11 @@
 import React from "react";
-import Nav from "../components/Nav";
+import Navigate from "../components/Navigate";
 
 const Header = () => {
     return (
-        <header className="container">
+        <header >
             <h1>Lovely recipes  <i className="fas fa-hamburger"></i></h1>
-            <Nav />
+            <Navigate />
         </header>
     );
 };
