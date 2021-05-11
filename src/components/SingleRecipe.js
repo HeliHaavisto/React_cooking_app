@@ -9,7 +9,7 @@ const SingleRecipe = () => {
 
     useEffect(() => {
         if (!recipe) {
-            axios.get("http://localhost:3001/recipes/" + id)
+            axios.get("https://intense-journey-32788.herokuapp.com/recipe/find/" + id)
                 .then((res) => setRecipe(res.data));
         }
     })

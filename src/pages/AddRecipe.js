@@ -55,7 +55,8 @@ const AddRecipe = () => {
 
     const submitRecipe = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:3001/recipes", newRecipe)
+        // axios.post("http://localhost:3001/recipes", newRecipe)
+        axios.post("https://intense-journey-32788.herokuapp.com/recipe/add", newRecipe)
         e.target.reset();
     };
 

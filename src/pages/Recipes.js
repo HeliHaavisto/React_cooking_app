@@ -24,7 +24,8 @@ const Recipes = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:3001/recipes")
+            // .get("http://localhost:3001/recipes")
+            .get("https://intense-journey-32788.herokuapp.com/recipe/all")
             .then((res => setRecipes(res.data)));
     }, []);
 
