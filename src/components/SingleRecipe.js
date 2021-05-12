@@ -6,7 +6,7 @@ const SingleRecipe = () => {
     const [recipe, setRecipe] = useState();
     let { id } = useParams();
     let history = useHistory();
-
+    console.log("id on, " + id);
     useEffect(() => {
         if (!recipe) {
             axios.get("https://intense-journey-32788.herokuapp.com/recipe/find/" + id)

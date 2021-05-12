@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const RecipeCard = (props) => {
+    console.log(props);
     return (
         <div className="recipesList" key={props.id}>
             <div className="card">
