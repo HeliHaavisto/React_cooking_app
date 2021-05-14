@@ -1,6 +1,6 @@
 {
   "name": "cooking",
-  "homepage": "http://HeliHaavisto.github.io/symfony",
+  "homepage": "http://HeliHaavisto.github.io/React_cooking_app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
