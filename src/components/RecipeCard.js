@@ -11,7 +11,7 @@ const RecipeCard = (props) => {
                     <div className="pin"></div>
                 </section>
                 <h2>{props.name}</h2><br></br>
-                <img src={`assets/${props.image}`} alt={props.name} />
+                <img src={`${props.image}`} alt={props.name} />
                 <p>{props.description}</p><br></br>
 
                 <Link to={`/recipes/${props.link}`}>Read more</Link>
