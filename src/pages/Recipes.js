@@ -3,7 +3,7 @@ import axios from 'axios';
 import RecipeCard from "../components/RecipeCard";
 import SingleRecipe from "../components/SingleRecipe";
 import AddRecipe from "../pages/AddRecipe";
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
 const SearchBox = ({ search }) => {
     return (
@@ -17,10 +17,14 @@ const Recipes = () => {
     const [recipes, setRecipes] = useState([]);
     const [searchInput, setSearchInput] = useState("");
 
+    let { url } = useRouteMatch();
+
 
     const searchValueHandler = (event) => {
         setSearchInput(event.target.value);
     };
+
+
 
     useEffect(() => {
         axios
@@ -40,7 +44,7 @@ const Recipes = () => {
     return (
         <div className="recipes">
             <Switch>
-                <Route path="/React_cooking_app/#/:recipes" exact>
+                <Route path={url} exact>
                     <div className="card2">
                         <section id="pins">
                             <div className="pin"></div>
@@ -53,7 +57,7 @@ const Recipes = () => {
                         {recipesList}
                     </div>
                 </Route>
-                <Route path="/React_cooking_app/#/recipes/:id">
+                <Route path={`${url}/:id`}>
                     <SingleRecipe />
 
                 </Route>
