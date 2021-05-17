@@ -11,9 +11,9 @@ const Main = () => {
         <div id="main">
             <Switch>
                 <Route path="/" exact component={Home} />
-                <Route path="/#/recipes" component={Recipes} />
-                <Route path="/#/about" component={About} />
-                <Route path="/#/addrecipe" component={AddRecipe} />
+                <Route path="/React_cooking_app/#/recipes" component={Recipes} />
+                <Route path="/React_cooking_app/#/about" component={About} />
+                <Route path="/React_cooking_app/#/addrecipe" component={AddRecipe} />
             </Switch>
         </div>
     );

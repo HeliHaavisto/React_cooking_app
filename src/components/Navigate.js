@@ -11,9 +11,9 @@ const Navigate = () => {
                 <NavbarCollapse>
                     <Nav className="nav">
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/#/recipes">Recipes</Nav.Link>
-                        <Nav.Link href="/#/about">About</Nav.Link>
-                        <Nav.Link href="/#/addrecipe">Add recipe</Nav.Link>
+                        <Nav.Link href="/React_cooking_app/#/recipes">Recipes</Nav.Link>
+                        <Nav.Link href="/React_cooking_app/#/about">About</Nav.Link>
+                        <Nav.Link href="/React_cooking_app/#/addrecipe">Add recipe</Nav.Link>
 
 
                     </Nav>
