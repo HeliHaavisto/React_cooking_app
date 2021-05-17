@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 
 
 const RecipeCard = (props) => {
     console.log(props);
+    let { url } = useRouteMatch();
     return (
         <div className="recipesList" key={props.id}>
             <div className="card">
@@ -12,10 +13,10 @@ const RecipeCard = (props) => {
                     <div className="pin"></div>
                 </section>
                 <h2>{props.name}</h2><br></br>
-                <img src={`${props.image}`} alt={props.name} />
+                {/* <img src={`${props.image}`} alt={props.name} /> */}
                 <p>{props.description}</p><br></br>
 
-                <Link to={`/React_cooking_app/#/recipes/${props.link}`}>Read more</Link>
+                <Link to={`${url}/${props.link}`}>Read more</Link>
 
 
             </div>
