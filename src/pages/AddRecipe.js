@@ -5,7 +5,6 @@ const AddRecipe = () => {
     const [newRecipe, setNewRecipe] = useState({
         name: "",
         description: "",
-        image: "",
         recipeIngredient: [],
         recipeInstructions: [],
     });
@@ -96,8 +95,8 @@ const AddRecipe = () => {
                     <label htmlFor="description">Recipe description</label><br></br>
                     <input type="text" name="description" onChange={valueChangeHandler} required></input><br></br>
 
-                    <label htmlFor="image">Select recipe image</label><br></br>
-                    <input type="file" name="image"></input><br></br>
+                    {/* <label htmlFor="image">Select recipe image</label><br></br>
+                    <input type="file" name="image"></input><br></br> */}
 
                     {ingredientsPart}
                     <button onClick={addMoreIngr}>add new ingredient row</button><br></br>
