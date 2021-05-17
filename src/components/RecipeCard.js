@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { HashRouter as Router } from 'react-router-dom';
+
 
 const RecipeCard = (props) => {
     console.log(props);
@@ -15,7 +15,7 @@ const RecipeCard = (props) => {
                 <img src={`${props.image}`} alt={props.name} />
                 <p>{props.description}</p><br></br>
 
-                <Link to={`/recipes/${props.link}`}>Read more</Link>
+                <Link to={`/React_cooking_app/#/recipes/${props.link}`}>Read more</Link>
 
 
             </div>
