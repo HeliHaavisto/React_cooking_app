@@ -29,7 +29,7 @@ const SingleRecipe = () => {
                         <div className="pin"></div>
                     </section>
                     <h1 >{recipe.name}</h1>
-                    <img src={`${recipe.image}`} alt={recipe.name} />
+                    {/* <img src={`${recipe.image}`} alt={recipe.name} /> */}
                     <p>{recipe.description}</p><br></br>
                     <h3>Ingredients</h3>
                     <ul>
