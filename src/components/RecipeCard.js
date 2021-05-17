@@ -14,7 +14,7 @@ const RecipeCard = (props) => {
                 <img src={`${props.image}`} alt={props.name} />
                 <p>{props.description}</p><br></br>
 
-                <Link to={`/recipes/${props.link}`}>Read more</Link>
+                <Link to={`/#/recipes/${props.link}`}>Read more</Link>
 
 
             </div>

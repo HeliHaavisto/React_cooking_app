@@ -40,7 +40,7 @@ const Recipes = () => {
     return (
         <div className="recipes">
             <Switch>
-                <Route path="/:recipes" exact>
+                <Route path="/#/:recipes" exact>
                     <div className="card2">
                         <section id="pins">
                             <div className="pin"></div>
@@ -53,7 +53,7 @@ const Recipes = () => {
                         {recipesList}
                     </div>
                 </Route>
-                <Route path="/recipes/:id">
+                <Route path="/#/recipes/:id">
                     <SingleRecipe />
 
                 </Route>
